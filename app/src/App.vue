@@ -1,55 +1,50 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+  <v-app style="background: none">
     <v-main>
-      <router-view/>
+      <router-view :newsPage="newsPage" :talkingStage="talkingStage" />
     </v-main>
   </v-app>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
-    //
+    // Tot ce ţine de pagina de News
+    newsPage: {
+      headerText: "MUIE MA SALAM", // Textul ce apare ca header pe burtiera
+      liveText: "LIVE MUIE MUIE MUIE", // Textul ce va fi afişat pe slot-ul din stânga sus. Deobicei este "LIVE"
+      bottomTexts: [
+        // Textele ce se vor afisa in partea de jos a paginii. Poti adauga cate vrei.
+        { text: "Salut si bine v-am gasit" },
+        { text: "Sa va iau in sabie ba terminatilor care sunteti terminati" },
+        { text: "Alooooooooooooooooo mi-e foame da-mi si mie 100 euro" },
+        { text: "Cf test tu bn eu?" },
+        { text: "OK DAR CINE A INTREBAT" },
+      ],
+    },
+    talkingStage: {
+      people: [
+        { text: "twitter.com/rafael" },
+        { text: "twitter.com/este" },
+        { text: "twitter.com/seful" },
+        { text: "twitter.com/la bani" },
+        { text: "twitter.com/la bani" },
+        { text: "twitter.com/la bani" },
+        { text: "twitter.com/la bani" },
+      ],
+    },
   }),
 };
 </script>
+
+<style>
+.OverlayPage {
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 0px !important;
+}
+</style>
