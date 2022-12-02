@@ -17,7 +17,7 @@
 <script>
 export default {
   props: ["talkingStage"],
-  name: "Call2People",
+  name: "TalkingStage",
   components: {},
   data() {
     return {};

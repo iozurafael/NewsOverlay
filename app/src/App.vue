@@ -13,8 +13,8 @@ export default {
   data: () => ({
     // Tot ce ţine de pagina de News
     newsPage: {
-      headerText: "MUIE MA SALAM", // Textul ce apare ca header pe burtiera
       liveText: "LIVE MUIE MUIE MUIE", // Textul ce va fi afişat pe slot-ul din stânga sus. Deobicei este "LIVE"
+      headerText: "MUIE MA SALAM", // Textul ce apare ca header pe burtiera
       bottomTexts: [
         // Textele ce se vor afisa in partea de jos a paginii. Poti adauga cate vrei.
         { text: "Salut si bine v-am gasit" },

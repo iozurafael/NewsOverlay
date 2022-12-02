@@ -5,6 +5,12 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/Home.vue'),
+  },
+
+  {
     path: '/news',
     name: 'News',
     component: () => import('../views/News.vue'),
@@ -13,7 +19,7 @@ const routes = [
   {
     path: '/call2people',
     name: 'Call2People',
-    component: () => import('../views/Call2People.vue'),
+    component: () => import('../views/TalkingStage.vue'),
   },
  
 ]
